@@ -1,0 +1,16 @@
+Apr 11 12:16:22.762 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Apr 11 12:16:22.762 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 33645.
+Apr 11 12:16:22.764 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 11 12:16:22.765 HYPERVISOR: exec_cmd: hypervisor working_dir /home/shakitar/GNS3/projects/school21/project-files/dynamips 
+Apr 11 12:16:22.765 GENERAL: working_dir=/home/shakitar/GNS3/projects/school21/project-files/dynamips
+Apr 11 12:16:22.767 HYPERVISOR: exec_cmd: hypervisor working_dir /home/shakitar/GNS3/projects/school21/project-files/dynamips/26132c1e-47f8-43cf-afcb-e011f58fb815 
+Apr 11 12:16:22.767 GENERAL: working_dir=/home/shakitar/GNS3/projects/school21/project-files/dynamips/26132c1e-47f8-43cf-afcb-e011f58fb815
+Apr 11 12:16:22.768 HYPERVISOR: exec_cmd: vm create R1 1 c3745 
+Apr 11 12:16:22.768 VM: VM R1 created.
+Apr 11 12:16:22.776 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5000 
+Apr 11 12:16:22.777 HYPERVISOR: exec_cmd: c3745 get_mac_addr R1 
+Apr 11 12:16:22.780 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Apr 11 12:16:22.782 HYPERVISOR: exec_cmd: vm set_ios R1 /home/shakitar/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Apr 11 12:16:22.783 HYPERVISOR: exec_cmd: c3745 set_mac_addr R1 c401.4a89.0000 
+Apr 11 12:16:22.784 HYPERVISOR: exec_cmd: vm set_nvram R1 256 
+Apr 11 12:16:22.785 HYPERVISOR: exec_cmd: vm set_ram R1 256 

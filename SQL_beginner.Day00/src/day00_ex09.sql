@@ -1,0 +1,1 @@
+SELECT(SELECT name FROM person p WHERE p.id = pv.person_id) AS person_name, (SELECT name FROM pizzeria p WHERE p.id = pv.pizzeria_id) as pizzeria_name from (SELECT * FROM person_visits pv WHERE visit_date BETWEEN '2022-01-07' AND '2022-01-09') as pv ORDER BY 1 ASC, 2 DESC

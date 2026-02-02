@@ -1,0 +1,2 @@
+1. Протокол: UDP. Source port: 123, Destination port: 123.
+2. Transmit Timestamp: Jun 29, 2025 17:45:38.958111051 UTC.

@@ -1,0 +1,2 @@
+Тип запроса: A (Address record)
+Класс запроса: IN (Internet)

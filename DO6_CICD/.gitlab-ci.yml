@@ -1,0 +1,59 @@
+stages:
+  - style
+  - build
+  - test
+  - deploy
+
+style-job:
+  stage: style
+  tags:
+    - style
+  script:
+    - clang-format -style=Google -n src/cat/s21_cat.* src/grep/s21_grep.*
+  after_script:
+    - bash telegram.sh
+  only:
+    - develop
+
+build-job:
+  stage: build
+  tags:
+    - build
+  script:
+    - cd src/cat && make s21_cat && cd ./../grep && make s21_grep
+  after_script:
+    - bash telegram.sh
+  artifacts:
+    paths:
+      - src/cat/s21_cat
+      - src/grep/s21_grep
+    expire_in: 30 days
+  only:
+    - develop
+
+test-job:
+  stage: test
+  tags:
+    - test
+  script:
+    - cd src/cat && make test
+    - cd ../grep && make test
+  after_script:
+    - bash telegram.sh
+  only:
+    - develop
+
+deploy-job:
+  stage: deploy
+  tags:
+    - deploy
+  when: manual
+  script:
+    - chmod +x script.sh
+    - chmod 777 src/cat
+    - chmod 777 src/grep
+    - bash script.sh
+  after_script:
+    - bash telegram.sh
+  only:
+    - develop

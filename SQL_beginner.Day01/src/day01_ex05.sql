@@ -1,0 +1,1 @@
+SELECT * FROM person CROSS JOIN pizzeria ORDER by person.id, pizzeria.id

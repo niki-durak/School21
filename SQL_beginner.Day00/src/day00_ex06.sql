@@ -1,0 +1,1 @@
+SELECT(SELECT name from person p where p.id = po.person_id) AS name, (SELECT name FROM person p WHERE p.id = po.person_id) = 'Denis' AS check_name from person_order po WHERE (menu_id = 13 or menu_id = 14 or menu_id = 18) AND order_date = '2022-01-07'
